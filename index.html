@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Boolean Bot</title>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="logic.js"></script>
+<script type="text/javascript" src="parser.js"></script>
+<script type="text/javascript" src="gui.js"></script>
+<link rel="stylesheet" media="all" href="main.css" />
+</head>
+
+<body>
+<div id="nav">
+
+</div>
+<div id="content">
+<div id="home-panel" class="panel">
+    <h1>How do you want to input your function?</h1>
+    <!-- screw it. I'm using a table -->
+    <div class="button-group">
+        <input type="button" id="button-expression" value="Expression" />
+        <input type="button" id="button-truth-table" value="Truth Table"  />
+        <input type="button" id="button-min-terms" value="Min Terms"  />
+    </div>
+    <p class="no-margin-bottom">The Boolean Bot can build truth tables, minimize logical expressions and simulate boolean functions. It uses the Quine-McCluskey algorithm and Petrick's method to find the optimal sum of products form of the function.</p>
+</div>
+
+<div id="expression-panel" class="panel">
+    <h1>Enter the expression:</h1>
+    <input type="text" id="expression-panel-input" value="" />
+    <div class="hide syntax" id="expression-panel-input-message"></div>
+    <table id="operators-table">
+        <tr>
+            <th colspan="5">Operators</th>
+        </tr>
+        <tr>
+            <td>Grouping</td>
+            <td>Not</td>
+            <td>And</td>
+            <td>Xor</td>
+            <td>Or</td>
+        </tr>
+        <tr>
+            <td>(ab)</td>
+            <td>a'</td>
+            <td>ab</td>
+            <td>a^b</td>
+            <td>a+b</td>
+        </tr>
+    </table>
+    <input type="button" value="Do Stuff" id="expression-panel-submit" />
+</div>
+
+<div id="min-terms-panel" class="panel">
+    <h1>Enter a comma separated list of min terms:</h1>
+    <input type="text" id="min-terms-panel-input" value="" />
+    
+    <h1>Enter a comma separated list of don't cares:</h1>
+    <input type="text" id="min-terms-panel-input-two" value="" />    
+    <p><strong>Tip:</strong> You can specify a range (e.g. <code>0, 2, 5-10, 13</code>)</p>
+    <input type="button" value="Do Stuff" id="min-terms-panel-submit" />
+</div>
+
+<div id="truth-table-panel-one" class="panel">
+    <h1>Enter a comma separated list of input variables:</h1>
+    <input type="text" id="truth-table-panel-one-input" value="" />
+    <p><strong>Example:</strong> a, b, c, d</p>
+    <input type="button" value="Do Stuff" id="truth-table-panel-one-submit" />
+</div>
+
+<div id="truth-table-panel-two" class="panel">
+    <h1>Click a row to toggle between 0, 1 and X:</h1>
+    <table border="1" class="truth-table">
+        <thead></thead>
+        <tbody id="truth-table-panel-two-body"></tbody>
+    </table>    
+    <input type="button" value="Do Stuff" id="truth-table-panel-two-submit" />    
+</div>
+
+<div id="output" class="panel">
+    <div id="truth-table-output">
+        <table border="1" class="truth-table">
+            <thead></thead>
+            <tbody id="truth-table-output-body"></tbody>
+        </table>
+    </div>
+    
+    <h2>Min Terms</h2>
+    <div id="min-terms-output">    </div>
+    
+    <h2>Minimized Expression(s)</h2>
+    <div id="expressions-output">
+        <table border="1">
+            <tbody id="expressions-output-body"></tbody>
+        </table>
+    </div>    
+    
+    <input type="button" value="Reset" id="back" />
+</div>
+
+</div> <!-- /content -->
+</body>
+</html>
+

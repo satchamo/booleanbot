@@ -1,0 +1,175 @@
+body {
+    background-color:#222;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color:#222;
+    font-size:14px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:10px;
+    line-height:normal;
+}
+
+h2 {
+    color:#222;
+    font-size:14px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:5px;
+}
+
+p {
+    color:#222;
+    font-size:12px;
+    line-height:normal;
+    margin-bottom:15px;
+}
+
+strong {
+    font-weight:bold;
+}
+
+code {
+    font-family:"Courier New", Courier, monospace;
+}
+
+.no-margin-bottom {
+    margin-bottom:0;
+}
+
+.hide {
+    display:none;
+    font-size:180px;
+}
+
+#header {
+    margin:auto;
+    margin-top:30px;
+    text-align:center;
+}
+
+#content {
+    background-color:#FFFFFF;
+    width:280px;
+    margin:auto;
+    padding:20px;
+}
+
+input[type=button] {
+    height:36px;
+    border:1px solid #ececec;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    color:#222;
+    font-size:14px;
+    display:block;
+    margin:auto;
+    width:120px;
+}
+
+input[type=text] {
+    font-family:"Courier New", Courier, monospace;
+    font-size:14px;
+    display:block;
+    margin:auto;
+    width:100%;
+    margin-bottom:15px;
+}
+
+.syntax {
+    font-family:"Courier New", Courier, monospace;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.button-group {
+    margin:auto;    
+    width:100%;
+}
+
+.button-group input {
+    margin-bottom:15px;
+}
+
+#operators-table {
+    margin:auto;
+    font-size:12px;
+    background-color:#ececec;
+    margin-bottom:15px;
+}
+
+#operators-table th {
+    font-weight:bold;
+    padding:5px;
+}
+
+#operators-table td {
+    padding:5px;
+    text-align:center;
+
+}
+
+#operators-table td.code {
+    padding:5px;
+    width:50px;
+    font-family:"Courier New", Courier, monospace;
+}
+
+table.truth-table {
+    font-family:"Courier New", Courier, monospace;
+    margin-bottom:15px;
+}
+
+table.truth-table th {
+    font-size:18px;
+    font-weight:bold;
+    padding:3px;
+}
+
+table.truth-table tbody th {
+    text-align:right;
+}
+
+table.truth-table td {
+    font-size:18px;
+    border-collapse:collapse;
+    border:1px solid #222;
+    padding:3px;
+    text-align:center;
+    background-color:#FFFFFF;
+}
+
+table.truth-table tr.odd td {
+    background-color:#ececec;
+}
+
+table.truth-table tr:hover td {
+    background-color:#bdbdbd;
+}
+
+#truth-table-panel-two-body tr:hover {
+    cursor:pointer;
+}
+
+#truth-table-panel-two-body td.one {
+    background-color:#A4C639;
+}
+
+#truth-table-panel-two-body td.dont-care {
+    background-color:#222;
+    color:#fff;
+}
+
+.error {
+    background-color:#FF0000;
+    font-weight:bold;
+    color:#FFFFFF;
+}
+
+#min-terms-output, #expressions-output {
+    font-family:"Courier New", Courier, monospace;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
